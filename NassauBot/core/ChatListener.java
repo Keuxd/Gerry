@@ -29,6 +29,7 @@ public class ChatListener extends ListenerAdapter {
 			eb.setAuthor(event.getAuthor().getEffectiveName(), null, event.getAuthor().getAvatarUrl());
 			
 			event.getChannel().sendMessageEmbeds(eb.build()).queue();
+			Main.mainFrame.addUserToRollList(event.getAuthor());
 		}
 		
 	}
